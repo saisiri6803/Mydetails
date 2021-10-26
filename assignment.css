@@ -1,0 +1,89 @@
+*{
+    margin: 10px;
+}
+.heading{
+    font-weight: bolder;
+    font-size:x-large;
+    color: rgb(136, 165, 219);
+    text-align: center;   
+}
+.edu{
+    font-weight: bold;
+    font-size: large;
+    color: rgb(136, 165, 219);
+}
+tbody{
+    margin-left: auto;
+    margin-right: auto;
+}
+.center{
+    font-weight: bold;
+    font-size: large;
+    color: rgb(136, 165, 219);
+    text-align: center;
+
+}
+.details{
+    font-weight: bold;
+    border: 0.9px solid rgb(136, 165, 219);
+    padding: 5px;
+    width: 25%;
+    height: 50%;
+    text-align: center;
+}
+.education{
+    width: 65%;
+    height: 50%;
+}
+.row{
+    font-weight: bold;
+}
+table{
+    width: 100%;
+}
+table,tr,td{
+    border: 1px solid darkgrey;
+    padding: 8px;
+    border-collapse: collapse;
+}
+tr:nth-child(even){
+    background-color: rgb(198, 217, 252) ;
+}
+.d{
+    border: 0.9px solid rgb(136, 165, 219);
+    text-align: left;
+    font-size: small;
+    font-weight: 800;
+    width: 45%;
+    height: auto;
+}
+.e{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+.h{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+} 
+.align{
+    text-align: center;
+    color: rgb(191, 213, 250);
+}
+@media only screen and (max-width:600px){
+    .d{
+        width: 100%;
+        height: inherit;
+    }
+    .details{
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+    }
+    .education{
+        width: 100%;
+        margin: 10px;
+    }
+}

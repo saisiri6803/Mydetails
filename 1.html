@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+    
+</body>
+<script>
+
+    let tabledetails = [
+        {c1:"Education",c2:"School/College",c3:"Passing year",c4:"Marks"},
+        {c1:"SSC",c2:"Sri Siddharta High School",c3:"2017",c4:"10.0"},
+        {c1:"Intermediate",c2:"Narayana College",c3:"2019",c4:"9.94"},
+        {c1:"B.Tech",c2:"Gayatri Vidya Parishad",c3:"2023",c4:"-"}
+    ];
+
+    let otherdetails = [
+        {c1:"Techinal Skills",c2:[" &#10004 Programming Languages: C,Python,MySQL,PHP,HTML,CSS,javaScript",
+    "&#10004 Frameworks:- Bootstrap,Laravel","&#10004 Libraries:-JQuery",
+    "&#10004 Software:- PHPStrom,PyCharm,VS Code.Adobe Photoshop,eclipse IDE"]},
+    {c1:"Projects",c2:["&#10004 Bounsn: Platform where you can Learn Programming Languages",
+     "&#10004 Virtual Labs: Labs Designed only for Jntua college of engineering pulivendula"]},
+     {c1:"Cercifications",c2:["1.Udacity-Front End Nano Degree","2.Coursera- Python For Everybody",
+    "3.Coursera - Data structures and algorithms"]},
+    {c1:"Hobbies",c2:["1.Reading Books","2.Painting","Website Designing",
+"4.Listening Music"]}
+    ];
+
+    var m = document.createElement("div");
+    m.classList.add("heading");
+    var heading = document.createTextNode("PORTFOLIO");
+    document.body.append(m);
+    m.append(heading);
+    var rule = document.createElement("hr");
+    document.body.appendChild(rule);
+
+    var d = document.createElement("div");
+    d.classList.add("h");
+    document.body.appendChild(d);
+    var d1 = document.createElement("div");
+    d1.classList.add("details");
+    d.appendChild(d1);
+
+    //For Profile and Name
+    var img = document.createElement("img");
+    img.setAttribute("src","C:/Users/ADMIN/Desktop/web development/images/girl.jpeg");
+    img.setAttribute("alt","Girl Profile");
+    img.setAttribute("width","40%");
+    img.setAttribute("height","auto");
+    d1.append(img);
+    var d2 = document.createElement("div");
+    var t1 = document.createTextNode("Name : Sirisha");
+    d1.append(d2);
+    d2.appendChild(t1);
+    var d3 = document.createElement("div");
+    var t2 = document.createTextNode("Student and Web developer");
+    d1.appendChild(d3);
+    d3.appendChild(t2);
+
+    //For Education Details
+    var d1 = document.createElement("div");
+    d1.classList.add("education");
+    d.appendChild(d1);
+
+    var d2 = document.createElement("div");
+    d2.classList.add("edu");
+    d1.append(d2);
+    var img = document.createElement("img");
+    img.setAttribute("src","https://img.favpng.com/18/16/23/square-academic-cap-graduation-ceremony-clip-art-png-favpng-V17FBhLG5E0mCXi1L6dTQn0XZ.jpg");
+    img.setAttribute("alt","Graduation Cap");
+    img.setAttribute("width","40px");
+    img.setAttribute("height","auto");
+    d2.append(img);
+    var img = document.createTextNode("Education");
+    d2.appendChild(img);
+
+    var d2 = document.createElement("div");;
+    d1.appendChild(d2);
+    var t = document.createElement("table");
+    t.classList.add("middle");
+    var tb = document.createElement("tbody");
+    t.append(tb);
+    d2.append(t);
+    for(i=0;i<tabledetails.length;i++)
+    {
+        var r = document.createElement("tr");
+        r.classList.add("row");
+        tb.append(r);
+            var c = document.createElement("td");
+            var D = document.createTextNode(tabledetails[i].c1);
+            r.append(c);
+            c.append(D);
+
+            var c = document.createElement("td");
+            var D = document.createTextNode(tabledetails[i].c2);
+            r.append(c);
+            c.append(D);
+
+            var c = document.createElement("td");
+            var D = document.createTextNode(tabledetails[i].c3);
+            r.append(c);
+            c.append(D);
+
+            var c = document.createElement("td");
+            var D = document.createTextNode(tabledetails[i].c4);
+            r.append(c);
+            c.append(D);
+    }
+    // For others
+    var p = document.createElement("div");
+    p.classList.add("e");
+    document.body.appendChild(p);
+
+    for(i=0;i<otherdetails.length;i++)
+    {
+        var d1 = document.createElement("div");
+        d1.classList.add("d");
+        p.append(d1);
+        
+        var c = document.createElement("div");
+        c.classList.add("center");
+        d1.append(c);
+        var information = document.createTextNode(otherdetails[i].c1);
+        c.append(information);
+
+        var b = document.createElement("br");
+        d1.appendChild(b);
+
+        otherdetails[i].c2.forEach(function(name){
+            var d2 = document.createElement("p");
+            d1.appendChild(d2);
+            d2.innerHTML += name;
+        })           
+    };
+
+    var base = document.createElement("footer");
+    base.classList.add("align");
+    var text = document.createTextNode("© 2020 All Rights Reserved");
+    document.body.appendChild(base);
+    base.append(text);
+</script>
+</html>
